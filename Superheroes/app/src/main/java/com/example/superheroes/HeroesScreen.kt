@@ -72,14 +72,13 @@ fun HeroesList(
                     hero = hero,
                     modifier = Modifier
                         .padding(horizontal = 16.dp, vertical = 8.dp)
-                        // Animate each list item to slide in vertically
                         .animateEnterExit(
                             enter = slideInVertically(
                                 animationSpec = spring(
                                     stiffness = StiffnessVeryLow,
                                     dampingRatio = DampingRatioLowBouncy
                                 ),
-                                initialOffsetY = { it * (index + 1) } // staggered entrance
+                                initialOffsetY = { it * (index + 1) }
                             )
                         )
                 )
